@@ -1,14 +1,30 @@
 package com.example.morsecodeconverter;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 public class Controller {
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextArea englishInput;
+
+    @FXML
+    private TextArea morseOutput;
+
+    @FXML
+    private Button playSoundButton;
+
+    @FXML
+    void displayMorseCodeWhenKeyReleased(KeyEvent event) {
+
     }
+
+    @FXML
+    void playMorseCodeSoundWhenButtonClicked(MouseEvent event) {
+
+    }
+
 }
