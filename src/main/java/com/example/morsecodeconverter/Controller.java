@@ -82,6 +82,7 @@ public class Controller {
 
     @FXML
     void displayMorseCodeWhenButtonClicked(MouseEvent event) {
+        englishToMorse = "";
         letters = englishInput.getText().split("");
         for(int i = 0; i < letters.length; i++) {
             englishToMorse += morsecodeAToZ.get(alphabetsAToZ.indexOf(letters[i]));
