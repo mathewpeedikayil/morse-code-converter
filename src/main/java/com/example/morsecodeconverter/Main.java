@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
-        stage.setTitle("Hello!");
+        stage.setTitle("Morse Code Converter");
         stage.setScene(scene);
         stage.show();
     }
@@ -21,3 +21,8 @@ public class Main extends Application {
         launch();
     }
 }
+
+// References
+
+// https://capitalizemytitle.com/morse-code-translator/
+// https://commons.wikimedia.org/wiki/Category:Audio_files_of_Morse_code_-_alphabet2
