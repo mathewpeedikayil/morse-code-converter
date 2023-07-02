@@ -18,16 +18,17 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <TextArea fx:id="englishInput" layoutX="41.0" layoutY="61.0" onKeyReleased="#displayMorseCodeWhenKeyReleased" prefHeight="160.0" prefWidth="418.0" promptText="Type/Paste Morse Code Here">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </TextArea>
-      <TextArea fx:id="morseOutput" layoutX="41.0" layoutY="286.0" prefHeight="160.0" prefWidth="418.0">
+      <TextArea fx:id="englishInput" layoutX="41.0" layoutY="61.0" prefHeight="160.0" prefWidth="418.0" promptText="Type/Paste Morse Code Here">
          <font>
             <Font size="16.0" />
          </font>
       </TextArea>
       <Button fx:id="playSoundButton" layoutX="383.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#playMorseCodeSoundWhenButtonClicked" text="Play Sound" />
+      <Button fx:id="displayedMorseCodeButton" layoutX="250.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#displayMorseCodeWhenButtonClicked" text="Display Morse Code" />
+      <Text fx:id="morseOutput" layoutX="42.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morse Code will appear here" wrappingWidth="432.0000366210936">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
