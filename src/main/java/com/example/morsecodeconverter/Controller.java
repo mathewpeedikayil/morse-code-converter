@@ -84,7 +84,7 @@ public class Controller {
     void displayMorseCodeWhenButtonClicked(MouseEvent event) {
         letters = englishInput.getText().split("");
         for(int i = 0; i < letters.length; i++) {
-
+            englishToMorse += morsecodeAToZ.get(alphabetsAToZ.indexOf(letters[i]));
         }
         morseOutput.setText(englishToMorse);
     }
@@ -95,7 +95,3 @@ public class Controller {
     }
 
 }
-
-
-
-
