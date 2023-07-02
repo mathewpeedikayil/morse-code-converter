@@ -1,59 +1,92 @@
 package com.example.morsecodeconverter;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Controller {
 
-    private String englishText;
-    private HashMap<Character, String> map = new HashMap<>();
+    private HashMap<String, String> map = new HashMap<>();
+    private ArrayList<String> alphabetsAToZ = new ArrayList<>();
+    private ArrayList<String> morsecodeAToZ = new ArrayList<>();
+    private String[] letters;
+    private String englishToMorse;
 
     @FXML
     private TextArea englishInput;
-
     @FXML
-    private TextArea morseOutput;
-
-    @FXML
-    private Button playSoundButton;
+    private Text morseOutput;
 
     public Controller() {
-        map.put('A', ".-");
-        map.put('B', "-…");
-        map.put('C', "-.-.");
-        map.put('D' , "-..");
-        map.put('E', ".");
-        map.put('F', "..-.");
-        map.put('G', "–.");
-        map.put('H', "….");
-        map.put('I', "..");
-        map.put('J', ".—");
-        map.put('K', "-.-");
-        map.put('L', ".-..");
-        map.put('M', "–");
-        map.put('N', "-.");
-        map.put('O', "—");
-        map.put('P', ".–.");
-        map.put('Q', "–.-");
-        map.put('R', ".-.");
-        map.put('S', "…");
-        map.put('T', "-");
-        map.put('U', "..-");
-        map.put('V', "…-");
-        map.put('W', ".–");
-        map.put('X', "-..-");
-        map.put('Y', "-.–");
-        map.put('Z', "–..");
+        alphabetsAToZ.add("A");
+        alphabetsAToZ.add("B");
+        alphabetsAToZ.add("C");
+        alphabetsAToZ.add("D");
+        alphabetsAToZ.add("E");
+        alphabetsAToZ.add("F");
+        alphabetsAToZ.add("G");
+        alphabetsAToZ.add("H");
+        alphabetsAToZ.add("I");
+        alphabetsAToZ.add("J");
+        alphabetsAToZ.add("K");
+        alphabetsAToZ.add("L");
+        alphabetsAToZ.add("M");
+        alphabetsAToZ.add("N");
+        alphabetsAToZ.add("O");
+        alphabetsAToZ.add("P");
+        alphabetsAToZ.add("Q");
+        alphabetsAToZ.add("R");
+        alphabetsAToZ.add("S");
+        alphabetsAToZ.add("T");
+        alphabetsAToZ.add("U");
+        alphabetsAToZ.add("V");
+        alphabetsAToZ.add("W");
+        alphabetsAToZ.add("X");
+        alphabetsAToZ.add("Y");
+        alphabetsAToZ.add("Z");
+        alphabetsAToZ.add(".");
+        alphabetsAToZ.add(" ");
+
+        morsecodeAToZ.add(".-");
+        morsecodeAToZ.add("-...");
+        morsecodeAToZ.add("-.-.");
+        morsecodeAToZ.add("-..");
+        morsecodeAToZ.add(".");
+        morsecodeAToZ.add("..-.");
+        morsecodeAToZ.add("–.");
+        morsecodeAToZ.add("....");
+        morsecodeAToZ.add("..");
+        morsecodeAToZ.add(".—");
+        morsecodeAToZ.add("-.-");
+        morsecodeAToZ.add(".-..");
+        morsecodeAToZ.add("–");
+        morsecodeAToZ.add("-.");
+        morsecodeAToZ.add("—");
+        morsecodeAToZ.add(".–.");
+        morsecodeAToZ.add("–.-");
+        morsecodeAToZ.add(".-.");
+        morsecodeAToZ.add("…");
+        morsecodeAToZ.add("-");
+        morsecodeAToZ.add("..-");
+        morsecodeAToZ.add("...-");
+        morsecodeAToZ.add(".–");
+        morsecodeAToZ.add("-..-");
+        morsecodeAToZ.add("-.–");
+        morsecodeAToZ.add("–..");
+        morsecodeAToZ.add(".-.-.-");
+        morsecodeAToZ.add(" ");
     }
 
     @FXML
-    void displayMorseCodeWhenKeyReleased(KeyEvent event) {
-        englishText = englishInput.getText();
+    void displayMorseCodeWhenButtonClicked(MouseEvent event) {
+        letters = englishInput.getText().split("");
+        for(int i = 0; i < letters.length; i++) {
 
+        }
+        morseOutput.setText(englishToMorse);
     }
 
     @FXML
@@ -62,4 +95,7 @@ public class Controller {
     }
 
 }
+
+
+
 
