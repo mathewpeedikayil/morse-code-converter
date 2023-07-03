@@ -1,3 +1,15 @@
+/**
+ * Main.java
+ * Created on 02/07/2023
+ * Last modified on 03/07/2023
+ * No copyright
+ * This class represents the main GUI.
+ * Version History: 1.0 - only pure code; 2.0 - comments added.
+ *
+ * @author Mathew Philip Peedikayil
+ * @version 2.0
+ */
+
 package com.example.morsecodeconverter;
 
 import javafx.application.Application;
@@ -22,6 +34,5 @@ public class Main extends Application {
 }
 
 // References
-
 // https://capitalizemytitle.com/morse-code-translator/
 // https://commons.wikimedia.org/wiki/Category:Audio_files_of_Morse_code_-_alphabet2

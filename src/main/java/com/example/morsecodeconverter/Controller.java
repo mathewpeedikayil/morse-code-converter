@@ -1,3 +1,15 @@
+/**
+ * Controller.java
+ * Created on 02/07/2023
+ * Last modified on 03/07/2023
+ * No copyright
+ * This class represents all the functionality.
+ * Version History: 1.0 - only pure code; 2.0 - comments added.
+ *
+ * @author Mathew Philip Peedikayil
+ * @version 2.0
+ */
+
 package com.example.morsecodeconverter;
 
 import javafx.fxml.FXML;
@@ -27,6 +39,7 @@ public class Controller {
     private Text morseOutput;
 
     public Controller() {
+        // alphabets
         alphabetsAToZ.add("A");
         alphabetsAToZ.add("B");
         alphabetsAToZ.add("C");
@@ -56,6 +69,7 @@ public class Controller {
         alphabetsAToZ.add(".");
         alphabetsAToZ.add(" ");
 
+        // morse code
         morsecodeAToZ.add(".-");
         morsecodeAToZ.add("-...");
         morsecodeAToZ.add("-.-.");
@@ -85,6 +99,7 @@ public class Controller {
         morsecodeAToZ.add(".-.-.-");
         morsecodeAToZ.add(" / ");
 
+        // audio
         audioFilePaths.add("/audio/Morse-A.mp3");
         audioFilePaths.add("/audio/Morse-B.mp3");
         audioFilePaths.add("/audio/Morse-C.mp3");
@@ -129,6 +144,10 @@ public class Controller {
     }
 
     private void playAudioFilesSequentially(int index) {
+        String temp = englishInput.getText();
+        temp = temp.replaceAll("\\s+",""); // removed space as no audio file for space
+        letters = temp.split("");
+
         if (index < letters.length) {
             String fileName = audioFilePaths.get(alphabetsAToZ.indexOf(letters[index]));
             String path = getClass().getResource(fileName).getPath();
@@ -143,7 +162,6 @@ public class Controller {
             });
 
             mediaPlayers.add(mediaPlayer); // store MediaPlayer instance in the list
-
             mediaPlayer.play();
         }
     }
