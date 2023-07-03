@@ -27,7 +27,7 @@
       <Button fx:id="displayedMorseCodeButton" layoutX="250.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#displayMorseCodeWhenButtonClicked" text="Display Morse Code" />
       <Text fx:id="morseOutput" layoutX="53.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morse Code will appear here" wrappingWidth="432.0000366210936">
          <font>
-            <Font size="17.0" />
+            <Font size="19.0" />
          </font>
       </Text>
    </children>

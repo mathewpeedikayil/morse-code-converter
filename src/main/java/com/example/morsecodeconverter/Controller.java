@@ -7,6 +7,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.scene.media.Media;
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -81,7 +82,7 @@ public class Controller {
         morsecodeAToZ.add("-.–");
         morsecodeAToZ.add("–..");
         morsecodeAToZ.add(".-.-.-");
-        morsecodeAToZ.add(" ");
+        morsecodeAToZ.add(" / ");
 
         audioFilePaths.add("/audio/Morse-A.mp3");
         audioFilePaths.add("/audio/Morse-B.mp3");
@@ -123,22 +124,21 @@ public class Controller {
 
     @FXML
     void playMorseCodeSoundWhenButtonClicked(MouseEvent event) {
-//        for(int j = 0; j < letters.length; j++) {
-//            String fileName = audioFilePaths.get(alphabetsAToZ.indexOf(letters[j]));
-//            URL resourceURL = getClass().getResource(fileName);
-//            String path = resourceURL.toString();
-//            System.out.println(path);
-//            Media media = new Media(path);
-//            MediaPlayer mediaPlayer = new MediaPlayer(media);
-//            mediaPlayer.play();
-//        }
+        for(int j = 0; j < letters.length; j++) {
+            String fileName = audioFilePaths.get(alphabetsAToZ.indexOf(letters[j]));
+            String path = getClass().getResource(fileName).getPath();
+            System.out.println(new File(path).toURI());
+            Media media = new Media(new File(path).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.play();
+        }
 
-        String fileName = "/audio/Morse-A.ogg";
-        String path = getClass().getResource(fileName).getPath();
-        System.out.println(new File(path).toURI().toString());
-        Media media = new Media(new File(path).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(media);
-        mediaPlayer.play();
+//        String fileName = "/audio/Morse-A.mp3";
+//        String path = getClass().getResource(fileName).getPath();
+//        System.out.println(new File(path).toURI());
+//        Media media = new Media(new File(path).toURI().toString());
+//        MediaPlayer mediaPlayer = new MediaPlayer(media);
+//        mediaPlayer.play();
     }
 
 }
