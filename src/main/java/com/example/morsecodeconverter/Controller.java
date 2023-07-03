@@ -7,13 +7,14 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.scene.media.Media;
 import java.io.File;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Controller {
 
     private HashMap<String, String> map = new HashMap<>();
+    private List<MediaPlayer> mediaPlayers = new ArrayList<>();
     private ArrayList<String> alphabetsAToZ = new ArrayList<>();
     private ArrayList<String> morsecodeAToZ = new ArrayList<>();
     private ArrayList<String> audioFilePaths = new ArrayList<>();
@@ -124,21 +125,27 @@ public class Controller {
 
     @FXML
     void playMorseCodeSoundWhenButtonClicked(MouseEvent event) {
-        for(int j = 0; j < letters.length; j++) {
-            String fileName = audioFilePaths.get(alphabetsAToZ.indexOf(letters[j]));
+        playAudioFilesSequentially(0);
+    }
+
+    private void playAudioFilesSequentially(int index) {
+        if (index < letters.length) {
+            String fileName = audioFilePaths.get(alphabetsAToZ.indexOf(letters[index]));
             String path = getClass().getResource(fileName).getPath();
             System.out.println(new File(path).toURI());
             Media media = new Media(new File(path).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(media);
+
+            mediaPlayer.setOnEndOfMedia(() -> {
+                mediaPlayer.stop();
+                mediaPlayer.dispose();
+                playAudioFilesSequentially(index + 1); // play next audio file after the current one finishes
+            });
+
+            mediaPlayers.add(mediaPlayer); // store MediaPlayer instance in the list
+
             mediaPlayer.play();
         }
-
-//        String fileName = "/audio/Morse-A.mp3";
-//        String path = getClass().getResource(fileName).getPath();
-//        System.out.println(new File(path).toURI());
-//        Media media = new Media(new File(path).toURI().toString());
-//        MediaPlayer mediaPlayer = new MediaPlayer(media);
-//        mediaPlayer.play();
     }
 
 }
