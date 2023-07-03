@@ -83,32 +83,32 @@ public class Controller {
         morsecodeAToZ.add(".-.-.-");
         morsecodeAToZ.add(" ");
 
-        audioFilePaths.add("audio/Morse-A.ogg");
-        audioFilePaths.add("audio/Morse-B.ogg");
-        audioFilePaths.add("audio/Morse-C.ogg");
-        audioFilePaths.add("audio/Morse-D.ogg");
-        audioFilePaths.add("audio/Morse-E.ogg");
-        audioFilePaths.add("audio/Morse-F.ogg");
-        audioFilePaths.add("audio/Morse-G.ogg");
-        audioFilePaths.add("audio/Morse-H.ogg");
-        audioFilePaths.add("audio/Morse-I.ogg");
-        audioFilePaths.add("audio/Morse-J.ogg");
-        audioFilePaths.add("audio/Morse-K.ogg");
-        audioFilePaths.add("audio/Morse-L.ogg");
-        audioFilePaths.add("audio/Morse-M.ogg");
-        audioFilePaths.add("audio/Morse-N.ogg");
-        audioFilePaths.add("audio/Morse-O.ogg");
-        audioFilePaths.add("audio/Morse-P.ogg");
-        audioFilePaths.add("audio/Morse-Q.ogg");
-        audioFilePaths.add("audio/Morse-R.ogg");
-        audioFilePaths.add("audio/Morse-S.ogg");
-        audioFilePaths.add("audio/Morse-T.ogg");
-        audioFilePaths.add("audio/Morse-U.ogg");
-        audioFilePaths.add("audio/Morse-V.ogg");
-        audioFilePaths.add("audio/Morse-W.ogg");
-        audioFilePaths.add("audio/Morse-X.ogg");
-        audioFilePaths.add("audio/Morse-Y.ogg");
-        audioFilePaths.add("audio/Morse-Z.ogg");
+        audioFilePaths.add("/audio/Morse-A.mp3");
+        audioFilePaths.add("/audio/Morse-B.mp3");
+        audioFilePaths.add("/audio/Morse-C.mp3");
+        audioFilePaths.add("/audio/Morse-D.mp3");
+        audioFilePaths.add("/audio/Morse-E.mp3");
+        audioFilePaths.add("/audio/Morse-F.mp3");
+        audioFilePaths.add("/audio/Morse-G.mp3");
+        audioFilePaths.add("/audio/Morse-H.mp3");
+        audioFilePaths.add("/audio/Morse-I.mp3");
+        audioFilePaths.add("/audio/Morse-J.mp3");
+        audioFilePaths.add("/audio/Morse-K.mp3");
+        audioFilePaths.add("/audio/Morse-L.mp3");
+        audioFilePaths.add("/audio/Morse-M.mp3");
+        audioFilePaths.add("/audio/Morse-N.mp3");
+        audioFilePaths.add("/audio/Morse-O.mp3");
+        audioFilePaths.add("/audio/Morse-P.mp3");
+        audioFilePaths.add("/audio/Morse-Q.mp3");
+        audioFilePaths.add("/audio/Morse-R.mp3");
+        audioFilePaths.add("/audio/Morse-S.mp3");
+        audioFilePaths.add("/audio/Morse-T.mp3");
+        audioFilePaths.add("/audio/Morse-U.mp3");
+        audioFilePaths.add("/audio/Morse-V.mp3");
+        audioFilePaths.add("/audio/Morse-W.mp3");
+        audioFilePaths.add("/audio/Morse-X.mp3");
+        audioFilePaths.add("/audio/Morse-Y.mp3");
+        audioFilePaths.add("/audio/Morse-Z.mp3");
     }
 
     @FXML
